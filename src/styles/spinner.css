@@ -1,0 +1,35 @@
+.void-spinner {
+  height: 40px;
+  width: auto;
+}
+.void-spinner-large {
+  height: 60px;
+}
+.void-spinner-medium {
+  height: 40px;
+}
+.void-spinner-small {
+  height: 25px;
+}
+.void-spinner-tiny {
+  height: 20px;
+}
+
+svg.void-spinner-normal path {
+  fill: #fff;
+}
+svg.void-spinner-primary path {
+  fill: var(--primaryColor);
+}
+svg.void-spinner-secondary path {
+  fill: var(--secondaryColor);
+}
+svg.void-spinner-success path {
+  fill: var(--successColor);
+}
+svg.void-spinner-warning path {
+  fill: var(--warningColor);
+}
+svg.void-spinner-error path {
+  fill: var(--errorColor);
+}

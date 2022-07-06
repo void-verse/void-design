@@ -1,0 +1,150 @@
+.void-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: 500;
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: transparent;
+  margin: 5px;
+  padding: 5px 20px;
+}
+
+/* start: size */
+.void-btn-large {
+  height: 48px;
+  min-width: 120px;
+  font-size: 14px;
+}
+.void-btn-medium {
+  height: 38px;
+  min-width: 120px;
+  font-size: 13.5px;
+}
+.void-btn-small {
+  height: 30px;
+  min-width: 120px;
+  font-size: 13px;
+}
+/* end: size */
+
+/* start: theme-structure */
+/* start: primary */
+.void-btn-primary-solid {
+  border-color: var(--primaryColor);
+  background-color: var(--primaryColor);
+  color: white;
+}
+.void-btn-primary-liquid {
+  border-color: var(--primaryColor);
+  background-color: white;
+  color: var(--primaryColor);
+}
+.void-btn-primary-gas {
+  border-color: white;
+  background-color: white;
+  color: var(--primaryColor);
+}
+/* end: primary */
+
+/* start: secondary */
+.void-btn-secondary-solid {
+  border-color: var(--secondaryColor);
+  background-color: var(--secondaryColor);
+  color: white;
+}
+.void-btn-secondary-liquid {
+  border-color: var(--secondaryColor);
+  background-color: white;
+  color: var(--secondaryColor);
+}
+.void-btn-secondary-gas {
+  border-color: white;
+  background-color: white;
+  color: var(--secondaryColor);
+}
+/* end: secondary */
+
+/* start: success */
+.void-btn-success-solid {
+  border-color: var(--successColor);
+  background-color: var(--successColor);
+  color: white;
+}
+.void-btn-success-liquid {
+  border-color: var(--successColor);
+  background-color: white;
+  color: var(--successColor);
+}
+.void-btn-success-gas {
+  border-color: white;
+  background-color: white;
+  color: var(--successColor);
+}
+/* end: success */
+
+/* start: warning */
+.void-btn-warning-solid {
+  border-color: var(--warningColor);
+  background-color: var(--warningColor);
+  color: white;
+}
+.void-btn-warning-liquid {
+  border-color: var(--warningColor);
+  background-color: white;
+  color: var(--warningColor);
+}
+.void-btn-warning-gas {
+  border-color: white;
+  background-color: white;
+  color: var(--warningColor);
+}
+/* end: warning */
+
+/* start: error */
+.void-btn-error-solid {
+  border-color: var(--errorColor);
+  background-color: var(--errorColor);
+  color: white;
+}
+.void-btn-error-liquid {
+  border-color: var(--errorColor);
+  background-color: white;
+  color: var(--errorColor);
+}
+.void-btn-error-gas {
+  border-color: white;
+  background-color: white;
+  color: var(--errorColor);
+}
+/* end: error */
+
+/* end: theme-structure */
+
+/* start: shape */
+.void-btn-rectangle {
+  border-radius: 4px;
+}
+.void-btn-rounded {
+  border-radius: 1000px;
+}
+/* end: shape */
+
+/* start: loading | disabled */
+.void-btn-disabled,
+.void-btn-loading {
+  opacity: 0.7;
+}
+.void-btn-disabled {
+  cursor: not-allowed;
+}
+.void-btn-loading {
+  cursor: progress;
+  padding: 5px 10px;
+  min-width: 200px;
+}
+/* end: loading | disabled */

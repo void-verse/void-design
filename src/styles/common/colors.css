@@ -1,0 +1,16 @@
+:root {
+  --primaryColor: #1e90ff;
+  --primaryColorLight: #1e90ff22;
+
+  --secondaryColor: #ff1493;
+  --secondaryColorLight: #ff149223;
+
+  --successColor: #13b685;
+  --successColorLight: #d8f8ef;
+
+  --warningColor: #ffa500;
+  --warningColorLight: #fff5dd;
+
+  --errorColor: #ff6347;
+  --errorColorLight: #ff634722;
+}

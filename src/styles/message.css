@@ -1,0 +1,92 @@
+.void-message {
+  --messageTime: 5s;
+}
+.void-message-box {
+  position: absolute;
+  top: 0;
+  height: fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+.void-message {
+  min-width: 200px;
+  box-sizing: border-box;
+  /* max-width: 350px; */
+  width: fit-content;
+  border-radius: 4px;
+  min-height: 30px;
+  height: fit-content;
+  padding: 10px;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideIn var(--messageTime) forwards;
+  border: 0px solid transparent;
+  box-shadow: 5px 5px 20px 7px whitesmoke;
+  margin-top: 10px;
+}
+.void-message-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 18px;
+  width: 18px;
+  margin: 0 10px;
+  padding: 2px;
+  border-radius: 1000px;
+  color: white;
+}
+.void-message-icon svg {
+  font-weight: 900;
+  height: 24px;
+  width: 24px;
+  stroke-width: 3px;
+  /* fill: white; */
+}
+.void-message-text {
+  width: 100%;
+  /* text-align: center; */
+  font-size: 13px;
+  margin: 0 10px;
+  overflow-wrap: break-word;
+}
+.void-message-success {
+  background-color: var(--successColorLight);
+  border-color: var(--successColor);
+}
+.void-message-success .void-message-icon {
+  background-color: var(--successColor);
+}
+.void-message-warning {
+  background-color: var(--warningColorLight);
+  border-color: var(--warningColor);
+}
+.void-message-warning .void-message-icon {
+  background-color: var(--warningColor);
+}
+.void-message-error {
+  background-color: var(--errorColorLight);
+  border-color: var(--errorColor);
+}
+.void-message-error .void-message-icon {
+  background-color: var(--errorColor);
+}
+
+@keyframes slideIn {
+  0% {
+    margin-top: -1000px;
+  }
+  5% {
+    margin-top: 10px;
+  }
+  95% {
+    margin-top: 10px;
+  }
+  100% {
+    margin-top: -1000px;
+  }
+}
