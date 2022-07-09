@@ -1,9 +1,6 @@
-.void-message {
-  --messageTime: 5s;
-}
-.void-message-box {
+.void-snackbar-box {
   position: absolute;
-  top: 0;
+  top: 10px;
   height: fit-content;
   width: fit-content;
   margin-left: auto;
@@ -11,10 +8,9 @@
   left: 0;
   right: 0;
 }
-.void-message {
+.void-snackbar {
   min-width: 200px;
   box-sizing: border-box;
-  /* max-width: 350px; */
   width: fit-content;
   border-radius: 4px;
   min-height: 30px;
@@ -24,12 +20,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: slideIn var(--messageTime) forwards;
+  animation: slideIn 0.5s forwards;
   border: 0px solid transparent;
   box-shadow: 5px 5px 20px 7px whitesmoke;
   margin-top: 10px;
 }
-.void-message-icon {
+.void-snackbar-exit {
+  animation: slideOut 0.5s forwards;
+}
+.void-snackbar-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,56 +36,58 @@
   width: 18px;
   margin: 0 10px;
   padding: 2px;
-  border-radius: 1000px;
+  border-radius: 30px;
   color: white;
 }
-.void-message-icon svg {
+.void-snackbar-icon svg {
   font-weight: 900;
   height: 24px;
   width: 24px;
   stroke-width: 3px;
-  /* fill: white; */
 }
-.void-message-text {
+.void-snackbar-text {
   width: 100%;
-  /* text-align: center; */
   font-size: 13px;
   margin: 0 10px;
   overflow-wrap: break-word;
 }
-.void-message-success {
+.void-snackbar-success {
   background-color: var(--successColorLight);
   border-color: var(--successColor);
 }
-.void-message-success .void-message-icon {
+.void-snackbar-success .void-snackbar-icon {
   background-color: var(--successColor);
 }
-.void-message-warning {
+.void-snackbar-warning {
   background-color: var(--warningColorLight);
   border-color: var(--warningColor);
 }
-.void-message-warning .void-message-icon {
+.void-snackbar-warning .void-snackbar-icon {
   background-color: var(--warningColor);
 }
-.void-message-error {
+.void-snackbar-error {
   background-color: var(--errorColorLight);
   border-color: var(--errorColor);
 }
-.void-message-error .void-message-icon {
+.void-snackbar-error .void-snackbar-icon {
   background-color: var(--errorColor);
 }
 
 @keyframes slideIn {
   0% {
-    margin-top: -1000px;
-  }
-  5% {
-    margin-top: 10px;
-  }
-  95% {
-    margin-top: 10px;
+    margin-top: -50px;
   }
   100% {
-    margin-top: -1000px;
+    margin-top: 10px;
+  }
+}
+
+@keyframes slideOut {
+  0% {
+    margin-top: 10px;
+    box-shadow: none;
+  }
+  100% {
+    margin-top: -50px;
   }
 }

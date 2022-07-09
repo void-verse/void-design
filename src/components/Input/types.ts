@@ -1,5 +1,6 @@
 import React from "react";
 import DateInput from "./date";
+import SelectInput from "./select";
 import TextInput from "./text";
 
 export type InputPropTypes = {
@@ -14,7 +15,24 @@ export type InputPropTypes = {
   onChange?: (val: string) => any;
 };
 
+export type SelectPropTypes = {
+  disabled?: boolean;
+  loading?: boolean;
+  placeholder?: string;
+  label?: string;
+  value?: string;
+  name?: string;
+  className?: string;
+  style?: React.CSSProperties;
+  onChange?: (val: string) => any;
+  options?: {
+    label: JSX.Element;
+    value: string;
+  }[];
+};
+
 export type InputTypeTypes = {
+  Select: typeof SelectInput;
   Text: typeof TextInput;
   Date: typeof DateInput;
 };

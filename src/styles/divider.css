@@ -1,0 +1,12 @@
+.void-divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.void-divider-line {
+  height: 1.5px;
+  width: 100%;
+  background-color: #dcdcdc;
+  border-radius: 1000px;
+  margin: 10px 0;
+}

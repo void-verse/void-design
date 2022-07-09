@@ -1,0 +1,14 @@
+{
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": ".css",
+        "cmd": " cp -r src/styles lib && cp src/index.css lib/void.css"
+      },
+      {
+        "match": ".ts",
+        "cmd": "yarn run build"
+      }
+    ]
+  }
+}
