@@ -42,12 +42,12 @@ export type InputTypeTypes = {
 
 export const defaultProps = (props: InputPropTypes, className?: string) => {
   return {
+    ...props, // Default props
     className: `void-input ${props.loading ? "void-input-loading" : ""} ${
       className || ""
     } ${props.className || ""}`,
     id: props.name,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) =>
       props.onChange ? props.onChange(e.target.value) : () => {},
-    ...props, // Default props
   };
 };
