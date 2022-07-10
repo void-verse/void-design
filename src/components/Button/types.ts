@@ -1,4 +1,12 @@
-export type ButtonPropTypes = {
+export type ButtonPropTypes<href = string | undefined> = (href extends undefined
+  ? React.DetailedHTMLProps<
+      React.ButtonHTMLAttributes<HTMLButtonElement>,
+      HTMLButtonElement
+    >
+  : React.DetailedHTMLProps<
+      React.AnchorHTMLAttributes<HTMLAnchorElement>,
+      HTMLAnchorElement
+    >) & {
   disabled?: boolean;
   loading?: boolean;
   className?: string;

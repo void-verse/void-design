@@ -14,13 +14,26 @@ const Button = ({
   disabled,
   loading,
   onClick = () => {},
+  ...remainingProps
 }: ButtonPropTypes): JSX.Element => {
   const ButtonWrapper = ({
     children,
   }: {
     children: JSX.Element;
   }): JSX.Element =>
-    href && !loading && !disabled ? <a href={href}>{children}</a> : children;
+    href && !loading && !disabled ? (
+      <a
+        href={href}
+        {...(remainingProps as React.DetailedHTMLProps<
+          React.AnchorHTMLAttributes<HTMLAnchorElement>,
+          HTMLAnchorElement
+        >)}
+      >
+        {children}
+      </a>
+    ) : (
+      children
+    );
 
   const generateClassName = (): string => {
     let name = `${className} void-btn `;
@@ -38,6 +51,11 @@ const Button = ({
         className={`${generateClassName()}`}
         onClick={disabled || loading ? () => {} : onClick}
         type={disabled ? "button" : type}
+        {...(!href &&
+          (remainingProps as React.DetailedHTMLProps<
+            React.ButtonHTMLAttributes<HTMLButtonElement>,
+            HTMLButtonElement
+          >))}
       >
         {loading && (
           <>

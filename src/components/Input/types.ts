@@ -3,7 +3,10 @@ import DateInput from "./date";
 import SelectInput from "./select";
 import TextInput from "./text";
 
-export type InputPropTypes = {
+export type InputPropTypes = React.DetailedHTMLProps<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+> & {
   disabled?: boolean;
   loading?: boolean;
   placeholder?: string;
@@ -39,15 +42,11 @@ export type InputTypeTypes = {
 
 export const defaultProps = (props: InputPropTypes, className?: string) => {
   return {
+    ...props, // Default props
     className: `void-input ${props.loading ? "void-input-loading" : ""} ${
       className || ""
     } ${props.className || ""}`,
     id: props.name,
-    name: props.name,
-    value: props.value,
-    disabled: props.disabled,
-    placeholder: props.placeholder,
-    style: props.style,
     onChange: (e: React.ChangeEvent<HTMLInputElement>) =>
       props.onChange ? props.onChange(e.target.value) : () => {},
   };
