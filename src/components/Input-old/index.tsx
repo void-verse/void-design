@@ -1,18 +1,18 @@
 import React from "react";
-
-import { InputPropTypes, InputTypeTypes } from "./types";
-
+import DateInput from "./date";
 import PasswordInput from "./password";
-import TextInput from "./text";
 import SelectInput from "./select";
+import TextInput from "./text";
+import { InputPropTypes, InputTypeTypes } from "./types";
 
 // DateInput;
 const Input: React.FC<InputPropTypes> & InputTypeTypes = (
   props
 ): JSX.Element => <TextInput {...props} />;
 
-Input.Password = PasswordInput;
 Input.Select = SelectInput;
 Input.Text = TextInput;
+Input.Date = DateInput;
+Input.Password = PasswordInput;
 
 export default Input;

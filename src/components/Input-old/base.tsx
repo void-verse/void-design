@@ -1,7 +1,7 @@
 import React from "react";
-import { defaultProps, InputPropTypes } from "./types";
+import { InputPropTypes } from "./types";
 
-const TextInput = (props: InputPropTypes): JSX.Element => {
+const BaseInput = (props: InputPropTypes): JSX.Element => {
   return (
     <div className="void-input-wrapper">
       {props.label && (
@@ -9,9 +9,9 @@ const TextInput = (props: InputPropTypes): JSX.Element => {
           <label htmlFor={props.name}>{props.label}</label>
         </p>
       )}
-      <input {...defaultProps(props)} type="text" />
+      <div className="void-input-container">{props.children}</div>
     </div>
   );
 };
 
-export default TextInput;
+export default BaseInput;

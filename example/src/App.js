@@ -36,6 +36,11 @@ const App = () => {
       </Button>
       <Form onSubmit={(values) => window.alert(JSON.stringify(values))}>
         <Input label="Name" name="name" placeholder="Enter your name" />
+        <Input.Password
+          label="Name"
+          name="password"
+          placeholder="Enter your name"
+        />
         <Input.Select
           label="Name"
           name="name"
