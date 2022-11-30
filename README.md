@@ -4,9 +4,10 @@ A hybrid package of UI elements for ReactJS, from [void](https://github.com/void
 
 <br />
 
-## What's new (v1.0.2)
+## What's new (v1.2.0)
 
-- Reduced package size by 95%
+- HTML Attributes for Input Components
+- Password Input
 
 <br />
 
@@ -34,15 +35,32 @@ import "void-design/lib/void.css";
 import "void-design/lib/void.css";
 
 import React from "react";
-import { Input } from "void-design";
+import { Input, Button, Snackbar } from "void-design";
 
 const App = () => {
   return (
     <div>
-      <Input placeholder="Enter your name" />
+      <Input.Text name="name" placeholder="Enter your name" />
+      <Input.Password name="password" placeholder="Enter your name" />
+      <Button onClick={() => Snackbar.success("Form submitted!")}>
+        Submit
+      </Button>
     </div>
   );
 };
 
 export default App;
 ```
+
+<br />
+
+## Components
+
+- Button
+- Input
+- Form
+- Slider
+- Snackbar
+- Spinner
+- Drawer
+- Divider
