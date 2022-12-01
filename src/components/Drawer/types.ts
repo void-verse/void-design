@@ -1,5 +1,7 @@
-export type DrawerPropTypes = {
-  children?: JSX.Element;
+export type DrawerPropTypes = React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+> & {
   closeIcon?: JSX.Element;
   footer?: JSX.Element;
   header?: JSX.Element;

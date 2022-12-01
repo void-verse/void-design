@@ -1,3 +1,4 @@
-export type DividerPropTypes = {
-  children?: JSX.Element;
-};
+export type DividerPropTypes = React.DetailedHTMLProps<
+  React.HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+> & {};

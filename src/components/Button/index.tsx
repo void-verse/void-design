@@ -14,7 +14,7 @@ const Button = ({
   disabled,
   loading,
   onClick = () => {},
-  ...remainingProps
+  ...defaultHTMLProps
 }: ButtonPropTypes): JSX.Element => {
   const ButtonWrapper = ({
     children,
@@ -24,7 +24,7 @@ const Button = ({
     href && !loading && !disabled ? (
       <a
         href={href}
-        {...(remainingProps as React.DetailedHTMLProps<
+        {...(defaultHTMLProps as React.DetailedHTMLProps<
           React.AnchorHTMLAttributes<HTMLAnchorElement>,
           HTMLAnchorElement
         >)}
@@ -41,7 +41,7 @@ const Button = ({
     name += `void-btn-${size} `;
     name += `void-btn-${shape} `;
     name += disabled ? "void-btn-disabled " : "";
-    name += loading ? "void-btn-loading " : "";
+    name += loading ? "void-btn-loading " : "void-btn-notloading ";
     return name;
   };
 
@@ -52,7 +52,7 @@ const Button = ({
         onClick={disabled || loading ? () => {} : onClick}
         type={disabled ? "button" : type}
         {...(!href &&
-          (remainingProps as React.DetailedHTMLProps<
+          (defaultHTMLProps as React.DetailedHTMLProps<
             React.ButtonHTMLAttributes<HTMLButtonElement>,
             HTMLButtonElement
           >))}
@@ -60,6 +60,7 @@ const Button = ({
         {loading && (
           <>
             <Spinner
+              className="void-btn-loader"
               theme={structure === "solid" ? "normal" : theme}
               size={size === "large" ? "small" : "tiny"}
             />

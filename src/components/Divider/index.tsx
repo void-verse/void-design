@@ -1,9 +1,13 @@
 import React from "react";
 import { DividerPropTypes } from "./types";
 
-const Divider = ({ children }: DividerPropTypes) => {
+const Divider = ({
+  children,
+  className = "",
+  ...defaultHTMLProps
+}: DividerPropTypes) => {
   return (
-    <div className="void-divider">
+    <div className={`${className} void-divider`} {...defaultHTMLProps}>
       {children ? (
         <>
           <div className="void-divider-line" />

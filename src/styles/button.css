@@ -11,7 +11,9 @@
   border-style: solid;
   border-color: transparent;
   margin: 5px;
-  padding: 5px 20px;
+  padding: 5px 15px;
+  transition: all 0.2s ease;
+  width: fit-content;
 }
 
 /* start: size */
@@ -144,7 +146,31 @@
 }
 .void-btn-loading {
   cursor: progress;
-  padding: 5px 10px;
-  min-width: 200px;
+  transition: all 0.2s ease;
+}
+.void-btn-notloading .void-btn-loader {
+  background-color: aqua;
+  width: 0;
+  animation: btnLoaderHide 0.2s forwards;
+}
+
+.void-btn-loading .void-btn-loader {
+  animation: btnLoaderShow 0.2s forwards;
+}
+@keyframes btnLoaderShow {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 40px;
+  }
+}
+@keyframes btnLoaderHide {
+  0% {
+    width: 40px;
+  }
+  100% {
+    width: 0px;
+  }
 }
 /* end: loading | disabled */

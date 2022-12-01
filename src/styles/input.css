@@ -36,7 +36,7 @@
 .void-input-core .void-input-icon svg {
   font-size: 10px;
   color: gray;
-  height: 18px;
+  height: 16px;
   cursor: pointer;
 }
 
@@ -61,7 +61,6 @@
   color: rgb(100, 100, 100);
 }
 .void-input-select svg {
-  color: gray;
   transition: all ease-in-out 0.3s;
 }
 

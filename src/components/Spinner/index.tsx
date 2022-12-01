@@ -4,10 +4,13 @@ import { SpinnerPropTypes } from "./types";
 const Spinner = ({
   size = "medium",
   theme = "normal",
+  className = "",
+  ...defaultHTMLProps
 }: SpinnerPropTypes): JSX.Element => {
   return (
     <svg
-      className={`void-spinner void-spinner-${size} void-spinner-${theme}`}
+      {...defaultHTMLProps}
+      className={`void-spinner void-spinner-${size} void-spinner-${theme} ${className}`}
       xmlns="http://www.w3.org/2000/svg"
       x="0px"
       y="0px"

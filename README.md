@@ -4,7 +4,7 @@ A hybrid package of UI elements for ReactJS, from [void](https://github.com/void
 
 <br />
 
-## What's new (v1.2.0)
+## What's new (v1.2.1)
 
 - HTML Attributes for Input Components
 - Password Input

@@ -4,17 +4,20 @@ import { DrawerPropTypes } from "./types";
 
 const Drawer = ({
   children,
+  className,
   closeIcon,
   footer,
   header,
   isOpen,
   onClose,
+  ...defaultHTMLProps
 }: DrawerPropTypes) => {
   return (
     <div
+      {...defaultHTMLProps}
       className={`void-drawer ${
         isOpen ? "void-drawer-opened" : "void-drawer-closed"
-      }`}
+      } ${className ?? ""}`}
     >
       <div className="void-drawer-close-icon" onClick={onClose}>
         {closeIcon ?? (

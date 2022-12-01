@@ -3,7 +3,7 @@
     "commands": [
       {
         "match": ".css",
-        "cmd": " cp -r src/styles lib && cp src/index.css lib/void.css"
+        "cmd": "cp -r src/styles lib && cp src/index.css lib/void.css"
       },
       {
         "match": ".ts",

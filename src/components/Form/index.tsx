@@ -6,7 +6,7 @@ const Form = ({
   children,
   onSubmit,
   style,
-  ...defaultFormProps
+  ...defaultHTMLProps
 }: FormPropTypes): JSX.Element => {
   const handleOnSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -28,7 +28,7 @@ const Form = ({
       className={className}
       onSubmit={handleOnSubmit}
       style={style}
-      {...defaultFormProps}
+      {...defaultHTMLProps}
     >
       {children}
     </form>

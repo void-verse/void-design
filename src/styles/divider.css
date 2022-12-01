@@ -4,9 +4,17 @@
   align-items: center;
 }
 .void-divider-line {
-  height: 1.5px;
+  height: 1.5px !important;
   width: 100%;
   background-color: #dcdcdc;
   border-radius: 1000px;
   margin: 10px 0;
+}
+.void-divider-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  margin-bottom: 5px;
+  color: #202020;
 }
