@@ -149,7 +149,6 @@
   transition: all 0.2s ease;
 }
 .void-btn-notloading .void-btn-loader {
-  background-color: aqua;
   width: 0;
   animation: btnLoaderHide 0.2s forwards;
 }

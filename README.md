@@ -4,10 +4,11 @@ A hybrid package of UI elements for ReactJS, from [void](https://github.com/void
 
 <br />
 
-## What's new (v1.2.1)
+## What's new (v1.2.2)
 
 - HTML Attributes for Input Components
 - Password Input
+- Card
 
 <br />
 
@@ -57,6 +58,7 @@ export default App;
 ## Components
 
 - Button
+- Card
 - Input
 - Form
 - Slider
